@@ -1,0 +1,27 @@
+
+{
+    "author": "Ajax.org B.V. <info@ajax.org>",
+    "contributors": [
+        { "name": "Fabian Jakobs", "email": "fabian@c9.io" }
+    ],
+    "name": "vfs-shell-interop",
+    "description": "Talk to VFS from shell scripts using unix sockets.",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/c9/vfs-shell-interop.git"
+    },
+    "main": "./interop.js",
+    "dependencies": {
+        "vfs-local": "~0.3.10"
+    },
+    "devDependencies": {
+        "vfs-socket": "~0.3.11"
+    },
+    "licenses" : [{
+        "type" : "MIT"
+    }],
+    "engines": {
+        "node": ">=0.6.0"
+    }
+}
