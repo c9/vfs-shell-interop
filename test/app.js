@@ -10,12 +10,13 @@ var Transport = require('vfs-socket/worker').smith.Transport;
 var interop = require("../interop");
 
 function main(vfs) {
-    interop.createServer(vfs, path.join(process.env.HOME, "/tmp/vfs.sock"), function(req, res) {
+    var server = interop.createServer(vfs, function(req, res) {
         console.log("GOT", req);
         res.send({
             antwort: "ist toll\n\n\n123süper"
         });
     });
+    server.listen(path.join(process.env.HOME, "/tmp/vfs.sock"));
 }
 
 var consumer = new Consumer();
